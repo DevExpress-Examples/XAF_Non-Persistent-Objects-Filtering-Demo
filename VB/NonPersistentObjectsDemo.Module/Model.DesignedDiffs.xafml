@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" ?>
+<Application Title="NonPersistentObjectsDemo">
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <Views>
+    <ListView Id="FindArticlesDialog_Articles_ListView">
+      <Columns>
+        <ColumnInfo Id="Author.Rating" PropertyName="Author.Rating" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Content" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="FindArticlesDialog_DetailView">
+      <Items>
+        <ActionContainerViewItem Id="FindActionContainer" ActionContainer="Filters" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" Direction="Horizontal">
+            <LayoutItem Id="FindActionContainer" ViewItem="FindActionContainer" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
