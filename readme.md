@@ -7,7 +7,6 @@
 
 * [Contact.cs](./CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/BusinessObjects/Contact.cs)
 * [Article.cs](./CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/BusinessObjects/Article.cs )
-* [NonPersistentObjectBase.cs](./CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/BusinessObjects/NonPersistentObjectBase.cs )
 * [Module.cs](./CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/Module.cs )
 
 
