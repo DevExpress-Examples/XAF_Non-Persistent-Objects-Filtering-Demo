@@ -16,7 +16,7 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
     [DefaultProperty(nameof(Contact.FullName))]
     [DevExpress.ExpressApp.ConditionalAppearance.Appearance("", Enabled = false, TargetItems = "*")]
     [DevExpress.ExpressApp.DC.DomainComponent]
-    public class Contact : NonPersistentObjectBase {
+    public class Contact :NonPersistentEntityObject {
         internal Contact() { }
         private string _UserName;
         [DevExpress.ExpressApp.Data.Key]
@@ -27,17 +27,17 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
         private string _FullName;
         public string FullName {
             get { return _FullName; }
-            set { SetPropertyValue(nameof(FullName), ref _FullName, value); }
+            set { SetPropertyValue(ref _FullName, value); }
         }
         private int _Age;
         public int Age {
             get { return _Age; }
-            set { SetPropertyValue<int>(nameof(Age), ref _Age, value); }
+            set { SetPropertyValue<int>(ref _Age, value); }
         }
         private float _Rating;
         public float Rating {
             get { return _Rating; }
-            set { SetPropertyValue<float>(nameof(Rating), ref _Rating, value); }
+            set { SetPropertyValue<float>(ref _Rating, value); }
         }
     }
 
@@ -93,7 +93,7 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
         public IList<DataRow> GetContactRows(CriteriaOperator criteria, IList<SortProperty> sorting) {
             var filter = CriteriaToWhereClauseHelper.GetDataSetWhere(criteria);
             string sort = null;
-            if(sorting!= null&& sorting.Count == 1 && sorting[0].Property is OperandProperty) {
+            if(sorting != null && sorting.Count == 1 && sorting[0].Property is OperandProperty) {
                 sort = string.Format("{0} {1}", sorting[0].PropertyName, sorting[0].Direction == DevExpress.Xpo.DB.SortingDirection.Ascending ? "ASC" : "DESC");
             }
             return dataSet.Tables["Contacts"].Select(filter, sort);
@@ -114,9 +114,9 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
             var dt = dataSet.Tables["Contacts"];
             for(int i = 0; i < 50; i++) {
                 var id = i;
-                var fullName = "FullName"+i;
+                var fullName = "FullName" + i;
                 var age = 16 + i;
-                var rating = new Random(i).Next(10,90);
+                var rating = new Random(i).Next(10, 90);
                 dt.LoadDataRow(new object[] { id, fullName, age, rating }, LoadOption.OverwriteChanges);
             }
         }

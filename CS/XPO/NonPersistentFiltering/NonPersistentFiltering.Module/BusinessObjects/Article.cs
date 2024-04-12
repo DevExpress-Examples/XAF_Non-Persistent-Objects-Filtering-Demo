@@ -14,7 +14,7 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
     [DefaultProperty(nameof(Article.Title))]
     [DevExpress.ExpressApp.ConditionalAppearance.Appearance("", Enabled = false, TargetItems = "*")]
     [DevExpress.ExpressApp.DC.DomainComponent]
-    public class Article : NonPersistentObjectBase {
+    public class Article :NonPersistentEntityObject {
         internal Article() { }
         private int _ID;
         [Browsable(false)]
@@ -26,18 +26,18 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
         private Contact _Author;
         public Contact Author {
             get { return _Author; }
-            set { SetPropertyValue(nameof(Author), ref _Author, value); }
+            set { SetPropertyValue(ref _Author, value); }
         }
         private string _Title;
         public string Title {
             get { return _Title; }
-            set { SetPropertyValue<string>(nameof(Title), ref _Title, value); }
+            set { SetPropertyValue<string>(ref _Title, value); }
         }
         private string _Content;
         [FieldSize(-1)]
         public string Content {
             get { return _Content; }
-            set { SetPropertyValue<string>(nameof(Content), ref _Content, value); }
+            set { SetPropertyValue<string>(ref _Content, value); }
         }
     }
 
@@ -70,17 +70,17 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
 
         #region DemoData
         static void CreateDemoData() {
-         //   var gen = new GenHelper();
+            //   var gen = new GenHelper();
             var contacts = ContactAdapter.GetAllContacts();
-           
-            for (int i = 0; i < 70; i++) {
+
+            for(int i = 0; i < 70; i++) {
                 var cntIndex = new Random(i).Next(0, contacts.Count);
                 articles.Add(new Article() {
                     ID = i,
                     Title = "Title" + i,
                     Content = "Content" + i,
                     Author = contacts[cntIndex]
-                }) ;
+                });
             }
         }
         #endregion

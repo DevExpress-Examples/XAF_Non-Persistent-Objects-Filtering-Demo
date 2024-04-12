@@ -33,18 +33,18 @@ namespace NonPersistentObjectsDemo.Module.Controllers {
     }
 
     [DomainComponent]
-    public class FindArticlesDialog : BoundNonPersistentObjectBase {
+    public class FindArticlesDialog :NonPersistentObjectImpl {
         private Contact _Author;
         [ImmediatePostData]
         public Contact Author {
             get { return _Author; }
-            set { SetPropertyValue<Contact>(nameof(Author), ref _Author, value); }
+            set { SetPropertyValue<Contact>(ref _Author, value); }
         }
         private float _AuthorMinRating;
         [Appearance("", Enabled = false, Criteria = "Author is not null")]
         public float AuthorMinRating {
             get { return _AuthorMinRating; }
-            set { SetPropertyValue<float>(nameof(AuthorMinRating), ref _AuthorMinRating, value); }
+            set { SetPropertyValue<float>(ref _AuthorMinRating, value); }
         }
         private BindingList<Article> _Articles;
         public BindingList<Article> Articles {
