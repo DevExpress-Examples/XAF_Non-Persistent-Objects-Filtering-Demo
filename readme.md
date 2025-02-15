@@ -34,10 +34,10 @@ This example demonstrates two approaches to filter objects.
 
 ## Files to Review
 
-- [Contact.cs](./CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/BusinessObjects/Contact.cs)
-- [Article.cs](./CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/BusinessObjects/Article.cs )
-- [Module.cs](./CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/Module.cs )
-- [FindArticlesController.cs](CS/EFCore/NonPersistentFilteringEF/NonPersistentFilteringEF.Module/Controllers/FindArticlesController.cs)
+- [Contact.cs](./CS/EFCore/NonPersistentFilteringEF.Module/BusinessObjects/Contact.cs)
+- [Article.cs](./CS/EFCore/NonPersistentFilteringEF.Module/BusinessObjects/Article.cs )
+- [Module.cs](./CS/EFCore/NonPersistentFilteringEF.Module/Module.cs )
+- [FindArticlesController.cs](CS/EFCore/NonPersistentFilteringEF.Module/Controllers/FindArticlesController.cs)
 
 ## Documentation
 
