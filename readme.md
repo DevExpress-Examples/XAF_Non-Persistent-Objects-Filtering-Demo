@@ -37,7 +37,7 @@ When **DynamicCollection** is used, the built-in [FullTextSearch Action](https:/
 Filtering and sorting at the data source level is also supported in Reports. Use the [Criteria](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ReportsV2.DataSourceBase.Criteria) and [Sorting](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ReportsV2.DataSourceBase.Sorting) properties of [CollectionDataSource](https://docs.devexpress.com/eXpressAppFramework/DevExpress.Persistent.Base.ReportsV2.CollectionDataSource) to specify filter criteria and sorting parameters.
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=XAF_Non-Persistent-Objects-Filtering-Demo&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=XAF_Non-Persistent-Objects-Filtering-Demo&~~~was_helpful=no)
 
