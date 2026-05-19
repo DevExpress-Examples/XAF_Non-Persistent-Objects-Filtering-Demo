@@ -14,7 +14,6 @@ public class NonPersistentFilteringWindowsFormsApplication : WinApplication {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "NonPersistentFiltering";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        UseOldTemplates = false;
         DatabaseVersionMismatch += NonPersistentFilteringWindowsFormsApplication_DatabaseVersionMismatch;
         CustomizeLanguagesList += NonPersistentFilteringWindowsFormsApplication_CustomizeLanguagesList;
     }
